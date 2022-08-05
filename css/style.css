@@ -34,6 +34,7 @@ h1 {
     }
 }
 
+
 h2 {
     border-bottom: 1px solid #cc1;
     font-family: 'Oxygen', Sans-Serif;
@@ -51,10 +52,11 @@ main {
     margin: 10vh 1em 10vh;
 }
 
-.main-hero {
-    min-height: 40vh;
+.main_hero {
+    min-height: 20vh;
     padding-top: 3em;
 }
+
 
 section {
     position: relative;
@@ -66,6 +68,10 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
+.container{
+    flex-wrap: wrap;
+}
+
 .navbar_menu ul {
     display: flex;
     padding-left: 0;
@@ -73,11 +79,15 @@ section {
 }
 
 .navbar_menu li {
+    display: inline-flex;
+}
+
+.navbar_menu a {
     display: inline-block;
 }
 
 .navbar_menu .menu_link {
-    display: block;
+    display: inline-block;
     padding: 1em;
     font-weight: bold;
     text-decoration: none;
@@ -94,7 +104,7 @@ section {
 
 .navbar_menu .navbar-active{
     background: #333;
-    color: #fff;
+    color: rgb(158, 55, 55);
     transition: ease 0.3s all;
 }
 
@@ -127,7 +137,7 @@ section {
     text-align: left;
 }
 
-@media only screen and (min-width: 35em){
+@media only screen and (min-width: 800px){
     .landing_container {
         max-width: 50em;
         padding: 4em;
@@ -170,7 +180,7 @@ section:nth-of-type(even) .landing_container::before {
     transition: ease 0.5s all;
 }
 
-section:nth-of-type(3n) .landing_container::after {
+/**section:nth-of-type(3n) .landing_container::after {
     content: '';
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
@@ -199,7 +209,7 @@ section:nth-of-type(3n + 1) .landing_container::after {
     opacity: 0;
     transition: ease 0.5s all;
 }
-
+//*
 
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
